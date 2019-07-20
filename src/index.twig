@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+    <link rel="stylesheet" href="styles/style.scss">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
+    <title>Репродукцио</title>
+
+</head>
+
+  <body>
+
+  <div class="grid">
+    <div class="gridChildOne">
+      <div>
+      <h1>Репро</br>дукцио</h1>
+      <h4>Оффлайн-магазин репродукций</br> шедевров мирового искусства</h4>
+      <p>Санкт-Петербург,</br>ул. Адмирала Черокова, 18</p>
+      <p><a href="">shop@reproduct.io</a></p>
+      </div>
+
+      <div>         
+       <p>Амур и Психея вместо слайдера</p>    
+       <div><img height="300px" src="assets/Amour_and_Psyche.jpg"></div>
+      </div>     
+    </div>
+  
+   <div class="gridChildTwo">
+    <div>
+      <p>Девочка с шариком вместо ещё одного слайдера</p>
+      <div><img width="99%" src="assets/benksi.jpg"></div>
+    </div>
+
+    <div>
+      <a class="popup-modal" href="#test-modal">Правила обработки персональных данных</a>
+
+      <div id="test-modal" class="white-popup mfp-hide">
+	      <h1>Правила обработки персональных данных</h1>
+	      <p>
+        Правила обработки персональных данных
+
+          Предоставляя свои персональные данные Пользователь даёт согласие на&nbsp;обработку, хранение и&nbsp;использование своих персональных данных на&nbsp;основании ФЗ &#8470;&nbsp;152-ФЗ &quot;О&nbsp;персональных данных от&nbsp;27.07.2006г.&nbsp;в&nbsp;следующих целях:
+          
+          	Осуществление клиентской поддержки;
+          Получения Пользователем информации о&nbsp;маркетинговых событиях;
+          Проведения аудита и&nbsp;внутренних исследований с&nbsp;целью
+          повышения качества предоставляемых услуг.
+          
+          Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Пользователя, такая как:
+          
+          	Фамилия, имя и&nbsp;отчество
+        </p>
+	      <p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
+      </div>
+          
+    </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.magnific-popup.js"></script>
+<script src="scripts/jquery.magnific-popup.min.js"></script>
+<script src="scripts/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/slick.min.js"></script>
+<script>
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#username',
+		modal: true
+	});
+
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
+
+$('.slider').slick({
+    dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 2
+});
+</script>
+  </body>
+
+</html>
+
